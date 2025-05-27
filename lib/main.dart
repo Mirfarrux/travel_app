@@ -38,8 +38,8 @@ class MyApp extends StatelessWidget {
               ),
             ],
           ),
-        ),
       ),
+    ),
     );
   }
 }
