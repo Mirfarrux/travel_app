@@ -20,7 +20,7 @@ class SecondScreen extends StatelessWidget {
                     Text(
                       "Hi, David 🖐️",
                       style: TextStyle(
-                        fontSize: 30.sp,
+                        fontSize: 30,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -34,14 +34,14 @@ class SecondScreen extends StatelessWidget {
                 Text(
                   "Explore the world",
                   style: TextStyle(
-                    fontSize: 20.sp,
+                    fontSize: 20,
                     fontWeight: FontWeight.w500,
                     color: Colors.grey,
                   ),
                 ),
                 SizedBox(height: 20.h),
                 Container(
-                  width: MediaQuery.of(context).size.width.w,
+                  width: MediaQuery.of(context).size.width - 1,
                   height: 50.h,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.r),
@@ -54,7 +54,7 @@ class SecondScreen extends StatelessWidget {
                       Text(
                         "Search places",
                         style: TextStyle(
-                          fontSize: 16.sp,
+                          fontSize: 16,
                           fontWeight: FontWeight.w500,
                           color: Colors.grey,
                         ),
@@ -73,7 +73,7 @@ class SecondScreen extends StatelessWidget {
                     Text(
                       "Popular places",
                       style: TextStyle(
-                        fontSize: 20.sp,
+                        fontSize: 20,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -83,7 +83,7 @@ class SecondScreen extends StatelessWidget {
                       child: Text(
                         "View all",
                         style: TextStyle(
-                          fontSize: 16.sp,
+                          fontSize: 16,
                           fontWeight: FontWeight.w600,
                           color: Colors.grey,
                         ),
@@ -91,25 +91,28 @@ class SecondScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.black,
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black,
+                        ),
+                        child: Text(
+                          "Most Viewed",
+                          style: TextStyle(fontSize: 16, color: Colors.white),
+                        ),
                       ),
-                      child: Text(
-                        "Most Viewed",
-                        style: TextStyle(fontSize: 16.sp, color: Colors.white),
-                      ),
-                    ),
-                    SizedBox(width: 20.w),
-                    buildElevatedButon("Nearby"),
-                    SizedBox(width: 20.w),
-                    buildElevatedButon("Latest"),
-                    SizedBox(width: 20.w),
-                    buildElevatedButon("Someting"),
-                  ],
+                      SizedBox(width: 20.w),
+                      buildElevatedButon("Nearby"),
+                      SizedBox(width: 20.w),
+                      buildElevatedButon("Latest"),
+                      SizedBox(width: 20.w),
+                      buildElevatedButon("Someting"),
+                    ],
+                  ),
                 ),
                 SizedBox(height: 50.h),
                 SingleChildScrollView(
@@ -133,6 +136,7 @@ class SecondScreen extends StatelessWidget {
   }
 
   // -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
   Positioned stackImage2(BuildContext context) {
     return Positioned(
       left: 200,
